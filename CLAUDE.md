@@ -13,6 +13,7 @@ Clip Notes (published on the Chrome Web Store since 1.0.0; repo `UDsGitHub/chrom
 - `npx vitest run`: unit and component tests (`lib/`, `components/`, `tests/`). One file: `npx vitest run lib/notes.test.ts`.
 - `npx playwright test`: end-to-end tests in `e2e/` on the built extension (`npm run build` first). `e2e/a11y.spec.ts` runs axe on every screen at 320px in light and dark; `e2e/manifest.spec.ts` pins the permissions.
 - `npm run lint` / `npx tsc --noEmit` / `npx prettier --check .`. ESLint bans network APIs.
+- `npm run store-assets`: the store's five screenshots and promo tile into `docs/store/` from the production build (`review/store-assets.spec.ts`; build first, not in CI). `docs/store/listing.md` is the listing text and `docs/privacy/index.html` the privacy policy (GitHub Pages from `docs/`); `tests/storeListing.test.ts` and `tests/privacyPolicy.test.ts` keep both in step with the manifest, so update them when a permission or the summary changes.
 
 Gotchas:
 - Every file in `entrypoints/` is an entrypoint, so their tests go in `tests/`.

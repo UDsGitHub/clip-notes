@@ -26,6 +26,8 @@ export async function launchExtension(userDataDir: string): Promise<ExtensionSes
     channel: 'chromium',
     // Tests assert en-US date formats; don't depend on the machine's language.
     locale: 'en-US',
+    // Dates render the same on every machine (and in the store screenshots).
+    timezoneId: 'UTC',
     args: [
       `--disable-extensions-except=${EXTENSION_PATH}`,
       `--load-extension=${EXTENSION_PATH}`,

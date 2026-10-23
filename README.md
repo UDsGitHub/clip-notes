@@ -47,6 +47,7 @@ npm run build   # production build in .output/chrome-mv3/
 | `npm run lint` | ESLint (also bans network APIs) |
 | `npm run format` | Prettier |
 | `npm test` | Vitest unit and component tests |
+| `npm run store-assets` | Chrome Web Store screenshots and promo tile into `docs/store/` (build first) |
 | `npm run e2e` | Playwright end-to-end and accessibility tests on the built extension (run `npm run build` and `npx playwright install chromium` first) |
 
 ## Permissions
@@ -159,21 +160,15 @@ Assets live in [`reference/`](reference/). Populate the UI with [`examples/sampl
 
 *Right-click selected text → Save to Notes*
 
-### Chrome Web Store (pick 5)
+### Chrome Web Store
 
-The listing accepts up to **5** screenshots at **1280×800** or **640×400**.
+The store's five 1280×800 screenshots and its 440×280 promo tile live in [`docs/store/`](docs/store/), made from the production build with sample notes:
 
-These `reference/` files are tall side-panel captures (~876×1860), so they are great for the README but **won’t upload as-is** to the store. Before publishing, place each chosen shot on a 1280×800 (or 640×400) canvas (centered panel on a simple browser chrome / solid background).
+```bash
+npm run build && npm run store-assets
+```
 
-Suggested store set:
-
-1. `screenshot_0_base.png` — what the product is  
-2. `screenshot_4_chip_filter.png` — tags / organization  
-3. `screenshot_3_search_filter.png` — find notes quickly  
-4. `screenshot_5_edit_note.png` — create / edit flow  
-5. `screenshot_10_context_menu.png` — clip from the page  
-
-Keep the rest for docs. Optional later: save store-sized exports under `reference/store/`.
+[`docs/store/listing.md`](docs/store/listing.md) has the listing text, permission justifications and privacy answers, ready to paste into the developer dashboard. The privacy policy is [`docs/privacy/index.html`](docs/privacy/index.html), published with GitHub Pages at https://udsgithub.github.io/chrome-notes-extension/privacy/.
 
 ## Author & license
 

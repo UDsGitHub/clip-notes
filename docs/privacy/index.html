@@ -1,0 +1,131 @@
+<!doctype html>
+<!-- The privacy policy for the Chrome Web Store listing, published with GitHub Pages from docs/.
+     tests/privacyPolicy.test.ts checks it names every permission the manifest asks for. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clip Notes: privacy policy</title>
+    <meta
+      name="description"
+      content="Clip Notes keeps your notes on your device. Nothing is collected or sent."
+    />
+    <link rel="icon" href="icon.png" />
+    <style>
+      /* The extension's own greys (entrypoints/sidepanel/style.css), light and dark. */
+      :root {
+        color-scheme: light dark;
+        --background: light-dark(#f5f5f5, #111111);
+        --foreground: light-dark(#111111, #fafafa);
+        --muted: light-dark(#444444, #999999);
+      }
+      body {
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        max-width: 44rem;
+        line-height: 1.6;
+        font-family: system-ui, sans-serif;
+        background: var(--background);
+        color: var(--foreground);
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      header img {
+        width: 48px;
+        height: 48px;
+      }
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.125rem;
+      }
+      .meta {
+        color: var(--muted);
+      }
+      a {
+        color: inherit;
+        text-underline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="icon.png" alt="" />
+        <h1>Privacy policy</h1>
+      </header>
+      <p class="meta">
+        Clip Notes, a Chrome extension for taking notes in the side panel. Effective October 23,
+        2026.
+      </p>
+
+      <h2>In short</h2>
+      <p>
+        Everything you write or clip in Clip Notes stays in your browser, on your device. Clip Notes
+        has no account and no server, makes no network requests, and collects, sells or shares
+        nothing. It uses no analytics or tracking.
+      </p>
+
+      <h2>What Clip Notes stores, and where</h2>
+      <p>
+        Clip Notes stores the notes you make: each note's title, text and tags, when it was created
+        and last edited, whether it's pinned, and its place in your list. For a note you clip from a
+        web page, it also keeps that page's address so you can go back to it. All of this is kept in
+        your browser's own extension storage on this device. Clip Notes doesn't sync it anywhere,
+        and nobody else can see it.
+      </p>
+
+      <h2>Reading web pages only when you ask</h2>
+      <p>
+        When you select text on a page, right-click and choose "Save to Notes", Clip Notes saves the
+        text you selected as a new note, titled with that page's title and linked to its address.
+        That is the only time it sees anything from a page. It can't read the pages you visit, and
+        it never sees your browsing history.
+      </p>
+
+      <h2>No network</h2>
+      <p>
+        Clip Notes never sends anything over the network: it has no server to send to. Opening a
+        clipped note's link opens that page in a tab, like any link.
+      </p>
+
+      <h2>Exports and imports</h2>
+      <p>
+        If you export your notes, the file is saved where your browser saves downloads, and what
+        happens to it after that is up to you. Importing reads only the file you pick or the text
+        you paste. Copying a note puts its text on your clipboard, only when you click it.
+      </p>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li>
+          <strong>Side panel:</strong> Clip Notes opens in Chrome's side panel, beside the page.
+        </li>
+        <li><strong>Storage:</strong> your notes are kept on your device.</li>
+        <li>
+          <strong>Context menus:</strong> the "Save to Notes" item that appears when you right-click
+          selected text.
+        </li>
+      </ul>
+
+      <h2>Deleting your data</h2>
+      <p>
+        You can delete any note in Clip Notes, or every note at once with the Delete all button.
+        Removing the extension from Chrome deletes all your notes too.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If this policy changes, the new version is published here with a new date. Since your notes
+        never leave your device, a change can't affect what you've already stored.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about privacy: <a href="mailto:dingding8003@gmail.com">dingding8003@gmail.com</a>.
+      </p>
+    </main>
+  </body>
+</html>

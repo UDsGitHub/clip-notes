@@ -10,7 +10,9 @@ export default defineConfig({
   }),
   manifest: {
     name: 'Clip Notes',
-    description: 'Take simple notes in your browser.',
+    // The store's summary (at most 132 characters; docs/store/listing.md).
+    description:
+      "Take notes in Chrome's side panel and clip text from any page with a right-click. Private: your notes never leave your device.",
     // CSS light-dark(), which the whole palette is built on, landed in 123.
     minimum_chrome_version: '123',
     permissions: ['sidePanel', 'contextMenus', 'storage'],
