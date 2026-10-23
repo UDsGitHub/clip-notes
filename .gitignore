@@ -1,8 +1,14 @@
 node_modules/
+.output/
+.wxt/
 dist/
+coverage/
+test-results/
+playwright-report/
 *.log
+.env*
 .DS_Store
-**/.DS_Store
-# Vitest reports and artifacts
-.vitest/
 .idea/
+# Local copies of store uploads
+clip-notes-zipped/
+clip-notes-zipped.zip
