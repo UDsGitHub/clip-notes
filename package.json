@@ -1,39 +1,55 @@
 {
   "name": "clip-notes",
-  "version": "1.0.0",
-  "description": "A simple chrome extension for taking notes",
-  "main": "script.js",
-  "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "typecheck": "tsc --noEmit",
-    "prepare": "husky",
-    "lint": "eslint .",
-    "test": "vitest"
-  },
-  "keywords": [
-    "chrome-extension",
-    "notes",
-    "side-panel"
-  ],
+  "description": "Take simple notes in your browser.",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
   "author": {
     "name": "Udochukwu Amaefule",
     "url": "https://github.com/UDsGitHub"
   },
   "license": "MIT",
-  "type": "module",
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/sortablejs": "^1.15.9",
-    "chrome-types": "^0.1.436",
-    "eslint": "^10.10.0",
-    "globals": "^17.12.0",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.70.0",
-    "vitest": "^5.0.0"
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "postinstall": "wxt prepare",
+    "prepare": "husky"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@wxt-dev/module-react": "^1.2.2",
+    "eslint": "^10.12.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "happy-dom": "^21.0.3",
     "husky": "^9.1.7",
-    "sortablejs": "^1.15.7"
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^5.0.5",
+    "web-ext": "^10.8.0",
+    "wxt": "^0.21.4"
   }
 }
