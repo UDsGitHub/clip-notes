@@ -23,7 +23,8 @@
   --bg-color: light-dark(var(--grey-100), var(--grey-950));
   --bg-color-inverse: light-dark(var(--grey-950), var(--grey-100));
   --primary-text-color: light-dark(var(--grey-50), var(--grey-950));
-  --text-color: light-dark(var(--grey-950), var(--grey-500));
+  /* Dark was grey-500 (#888): 4.15:1 on a hovered or editing card. */
+  --text-color: light-dark(var(--grey-950), #929292);
   --text-color-inverse: light-dark(var(--grey-500), var(--grey-950));
   /* Dark was grey-600 (#737373), under 4.5:1 on the dark page; #999 passes on every surface. */
   --text-secondary-color: light-dark(var(--grey-700), #999999);
